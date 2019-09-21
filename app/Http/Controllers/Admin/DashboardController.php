@@ -29,7 +29,7 @@ $users->telephone = $request->input('telephone');
 $users->email = $request->input('email');        
 $users->update();
 
-return redirect('/role-register')->with('status','Your Data is Updated');
+return redirect('/role-register')->with('status','Tes infos sont mis à jour');
 
             }
 
@@ -38,7 +38,7 @@ return redirect('/role-register')->with('status','Your Data is Updated');
             public function registerdelete(Request $request, $id){
                 $users = User::findOrFail($id);
 $users->delete(); 
-return redirect('/role-register')->with('status','Your Data is Deleted');
+return redirect('/role-register')->with('status','tes infos ont etaient supprimer');
 
                     }
 
@@ -58,7 +58,7 @@ $users->password = $request->input('password');
                         
 $users->save();
 
-return redirect('/role-register')->with('status','User est ajouter');
+return redirect('/role-register')->with('status','Utilisateur est ajouter');
 
                     }
 

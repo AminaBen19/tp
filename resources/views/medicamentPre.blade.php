@@ -45,7 +45,7 @@ Medicament | Pharma Benazza
                       Forme
                       </th>
                       <th>
-                     famille
+                     Famille
                       </th><th>
                       Remboursable
                       </th><th>

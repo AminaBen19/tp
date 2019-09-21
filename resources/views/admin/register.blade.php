@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-Registered Roles | Pharma Benazza
+Registered Roles | Pharmacie BENAZZA
 
 @endsection
 
@@ -21,10 +21,11 @@ Registered Roles | Pharma Benazza
 
       <div class="modal-body">
         <div class="form-group row">
-                            <label for="nom" class="col-form-label">Nom </label>
 
                             <div class="col-md-6">
-                                <input id="nom" type="text" class="form-control @error('nom') is-invalid @enderror" name="nom" value="{{ old('nom') }}" required autocomplete="nom" autofocus>
+                            <label for="nom" class="col-form-label">Nom </label>
+
+                                <input id="nom" type="text" name="nom" value="{{ old('nom') }}" required autocomplete="nom" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -35,10 +36,11 @@ Registered Roles | Pharma Benazza
                         </div>
 
                         <div class="form-group row">
-                            <label for="prenom" class="col-form-label">Prenom </label>
 
                             <div class="col-md-6">
-                                <input id="prenom" type="text" class="form-control @error('prenom') is-invalid @enderror" name="prenom" value="{{ old('prenom') }}" required autocomplete="prenom" autofocus>
+                            <label for="prenom" class="col-form-label">Prenom </label>
+
+                                <input id="prenom" type="text" name="prenom" value="{{ old('prenom') }}" required autocomplete="prenom" autofocus>
 
                                 @error('prenom')
                                     <span class="invalid-feedback" role="alert">
@@ -49,10 +51,11 @@ Registered Roles | Pharma Benazza
                         </div>
 
                         <div class="form-group row">
-                            <label for="dateNais" class="col-md-4 col-form-label text-md-right">Date Naissance </label>
 
                             <div class="col-md-6">
-                                <input id="dateNais" type="date" class="form-control @error('dateNais') is-invalid @enderror" name="dateNais" value="{{ old('dateNais') }}" required autocomplete="dateNais" autofocus>
+                            <label for="dateNais" class="col-form-label">Date Naissance </label>
+
+                                <input id="dateNais" type="date" name="dateNais" value="{{ old('dateNais') }}" required autocomplete="dateNais" autofocus>
 
                                 @error('dateNais')
                                     <span class="invalid-feedback" role="alert">
@@ -65,10 +68,11 @@ Registered Roles | Pharma Benazza
                         
 
                         <div class="form-group row">
-                            <label for="telephone" class="col-form-label">Telephone </label>
 
                             <div class="col-md-6">
-                                <input id="telephone" type="text" class="form-control @error('telephone') is-invalid @enderror" name="telephone" value="{{ old('telephone') }}" required autocomplete="telephone" autofocus>
+                            <label for="telephone" class="col-form-label">Telephone </label>
+
+                                <input id="telephone" type="text" name="telephone" value="{{ old('telephone') }}" required autocomplete="telephone" autofocus>
 
                                 @error('telephone')
                                     <span class="invalid-feedback" role="alert">
@@ -79,10 +83,11 @@ Registered Roles | Pharma Benazza
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-form-label">E-Mail </label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                            <label for="email" class="col-form-label">E-Mail </label>
+
+                                <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -95,10 +100,11 @@ Registered Roles | Pharma Benazza
 
 
                         <div class="form-group row">
-                        <label for="login" class="col-form-label">Login </label>
 
                         <div class="col-md-6">
-                                <input id="login" type="text" class="form-control @error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" required autocomplete="login" autofocus>
+                        <label for="login" class="col-form-label">Login </label>
+
+                                <input id="login" type="text" name="login" value="{{ old('login') }}" required autocomplete="login" autofocus>
 
                                 @error('login')
                                     <span class="invalid-feedback" role="alert">
@@ -113,10 +119,11 @@ Registered Roles | Pharma Benazza
                         
 
                         <div class="form-group row">
-                        <label for="password" class="col-form-label">Mot de passe </label>
 
 <div class="col-md-6">
-    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+<label for="password" class="col-form-label">Mot de passe </label>
+
+    <input id="password" type="password" class="{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
     @if ($errors->has('password'))
         <span class="invalid-feedback">
@@ -127,19 +134,20 @@ Registered Roles | Pharma Benazza
                         </div>
 
                         <div class="form-group row">
-                        <label for="password-confirm" class="col-form-label">Confirme le Mot de passe</label>
 
 <div class="col-md-6">
-    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+<label for="password-confirm" class="col-form-label">Confirme le Mot de passe</label>
+
+    <input id="password-confirm" type="password" name="password_confirmation" required>
 </div>
                         </div>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      
         <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>      
+                                    {{ __('Enregistrer') }}
+                                </button>  
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+    
                                 </div>
                                 </form>
 
@@ -151,9 +159,7 @@ Registered Roles | Pharma Benazza
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Registered Roles
                 <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal">Ajouter Un pharmacien</button>
-                </h4>
                 @if(\Session::has('status'))
     <div class="alert alert-success" role="alert">
       {{\Session::get('status')}}

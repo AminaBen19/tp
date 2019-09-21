@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Contact</title>
 </head>
 <style>
 #contatti{
-  background-color: #70c3be;
+  background-color: #f6993f;
   letter-spacing: 2px;
   }
 #contatti a{
@@ -124,10 +124,9 @@
         <div class="text-white">
         <h2 class="text-uppercase mt-4 font-weight-bold">Où nous sommes</h2>
 
-        <i class="fas fa-phone mt-3"></i> <a href="tel:+">(+213) 123456</a><br>
-        <i class="fas fa-phone mt-3"></i> <a href="tel:+">(+213) 123456</a><br>
-        <i class="fa fa-envelope mt-3"></i> <a href="">info@test.it</a><br>
-        <i class="fas fa-globe mt-3"></i> Maghnia , Tlemcen<br>
+        <i class="fas fa-phone mt-3"></i> <a href="tel:+">044964222</a><br>
+        <i class="fa fa-envelope mt-3"></i> <a href="">asma18ben@gmail.com</a><br>
+        <i class="fas fa-globe mt-3"></i> Maghnia , Tlemcen-Algérie<br>
         <div class="my-4">
         </div>
         </div>

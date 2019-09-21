@@ -16,4 +16,12 @@ class FournisseurController extends Controller
 
         return view('fournisseurs', ['fourni' => $fourni]);
    }
+
+   public function indexGes(){
+
+        
+    $fourni = DB::table('fournisseur')->paginate(15);
+
+    return view('admin.Fournisseur.fournisseur', ['fourni' => $fourni]);
+}
 }

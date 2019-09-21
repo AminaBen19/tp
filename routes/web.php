@@ -21,6 +21,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+//profile
+
 //Route::get('profile', 'UserController@profile');
 
 //Route::post('profile', 'UserController@update_avatar');
@@ -52,9 +55,15 @@ Route::post('user/profile/update',[
 
 Route::group(['middleware' => ['auth','admin']], function () {
    // Route::get('admin/routes', 'HomeController@admin');
-   Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-});
+/*   Route::get('/dashboard', function () {
+    return view('admin.dashboard'); });*/
+
+    Route::get('/dashboard','Admin\MedicamentsController@index');
+
+
+
+//user
+
 Route::get('/role-register','Admin\DashboardController@registered');
 Route::get('/role-edit/{id}','Admin\DashboardController@registeredit');
 Route::put('/role-register-update/{id}','Admin\DashboardController@registerupdate');
@@ -64,17 +73,61 @@ Route::get('/role-datail/{id}','Admin\DashboardController@show');
 Route::delete('/role-delete/{id}','Admin\DashboardController@registerdelete');
 Route::post('/save-users','Admin\DashboardController@store');
 
+//Medicament
+
+Route::get('/medicaments','Admin\MedicamentsController@indexGes');
 
 
-Route::get('/medicaments','Admin\MedicamentsController@index');
+//Fournisseur
+
+
+Route::get('/fournisseur','FournisseurController@indexGes');
+
+
+
+//AChat
+
+Route::get('/save-achat','Admin\AchatsController@store');
+
+Route::get('/achat-register','Admin\AchatsController@registered');
+Route::get('/achat-edit/{numA}','Admin\AchatsController@achatedit');
+Route::put('/achat-update/{numA}','Admin\AchatsController@achatupdate');
+
+Route::delete('/achat-delete/{numA}','Admin\AchatsController@registerdelete');
+
+
+
+
+//Lot
+
+Route::get('lot','Admin\LotController@index');
+Route::get('lot/{numL}','Admin\LotController@show');
+
+//vente
+
+
+
+
 
 
 });
+
+//medicament
 Route::get('/search','ListeMedicament@search');
 
 Route::get('/medicamentPre','ListeMedicament@index');
 
+//liste des fournisseur
+
 Route::get('/fournisseurs','FournisseurController@index');
+
+//contact
+
+Route::get('/contact',function(){
+return view('contact');
+
+});
+
 
 
 //Route::get('/home', 'HomeController@index')->name('home');

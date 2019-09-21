@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/logo.png">
+  <link rel="icon" type="image/png" href="../assets/img/logo.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
       @yield('title')
@@ -30,18 +30,11 @@
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="green">
+    <div class="sidebar" data-color="orange">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
-      <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-          CT
-        </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
-        </a>
-      </div>
+      
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
           <li class="{{ 'dashboard' == request()->path() ? 'active' : '' }}">
@@ -49,11 +42,11 @@
               <i class="now-ui-icons design_app"></i>
               <p>Dashboard</p>
             </a>
-          </li>
+          </li> 
           <li class="{{ 'role-register' == request()->path() ? 'active' : '' }}">
             <a href="/role-register">
               <i class="now-ui-icons users_single-02"></i>
-              <p>User Profile</p>
+              <p>Utilisateurs</p>
             </a>
           </li>
           <li class="{{ 'medicaments' == request()->path() ? 'active' : '' }}">
@@ -63,53 +56,34 @@
             </a>
           </li>
           <li class="{{ 'fournisseurs' == request()->path() ? 'active' : '' }}">
-            <a href="/fournisseurs">
+            <a href="/fournisseur">
               <i class="glyphicon glyphicon-list"></i>
               <p>Fournisseur</p>
             </a>
           </li>
           <li>
-            <a href="./icons.html">
-              <i class="now-ui-icons education_atom"></i>
+          <li class="{{ 'lot' == request()->path() ? 'active' : '' }}">
+          <a href="/lot">
+              <i class="glyphicon glyphicon-list"></i>
               <p>Lot</p>
             </a>
           </li>
-          <li>
-            <a href="./icons.html">
-              <i class="now-ui-icons education_atom"></i>
+          <li class="{{ 'achat-register' == request()->path() ? 'active' : '' }}">
+            <a href="/achat-register">
+              <i class="glyphicon glyphicon-list"></i>
               <p>Achat</p>
             </a>
           </li>
-          <li>
-            <a href="./icons.html">
-              <i class="now-ui-icons education_atom"></i>
+          <li class="{{ 'vente-register' == request()->path() ? 'active' : '' }}">
+            <a href="/vente-register">
+              <i class="glyphicon glyphicon-list"></i>
               <p>Ventes</p>
             </a>
           </li>
-          <li>
-            <a href="./map.html">
-              <i class="now-ui-icons location_map-big"></i>
+          <li class="{{ 'statistique' == request()->path() ? 'active' : '' }}">
+            <a href="/statistique">
+              <i class="glyphicon glyphicon-list"></i>
               <p>Statistique</p>
-            </a>
-          </li>
-          
-          
-          <li>
-            <a href="./tables.html">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Table List</p>
-            </a>
-          </li>
-          <li>
-            <a href="./typography.html">
-              <i class="now-ui-icons text_caps-small"></i>
-              <p>Typography</p>
-            </a>
-          </li>
-          <li class="active-pro">
-            <a href="./upgrade.html">
-              <i class="now-ui-icons arrows-1_cloud-download-93"></i>
-              <p>Upgrade to PRO</p>
             </a>
           </li>
         </ul>
@@ -127,7 +101,6 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Table List</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -135,27 +108,9 @@
             <span class="navbar-toggler-bar navbar-kebab"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
-            <form>
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <div class="input-group-append">
-                  <div class="input-group-text">
-                    <i class="now-ui-icons ui-1_zoom-bold"></i>
-                  </div>
-                </div>
-              </div>
-            </form>
+            
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#pablo">
-                  <i class="now-ui-icons media-2_sound-wave"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Stats</span>
-                  </p>
-                </a>
-              </li>
-
-             
+              
              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                <!--   <i class="now-ui-icons location_world"></i>
@@ -182,14 +137,7 @@
                                     </form>
                 </div>
               </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="#pablo">
-                  <i class="now-ui-icons users_single-02"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Account</span>
-                  </p>
-                </a>
-              </li>
+              
             </ul>
           </div>
         </div>

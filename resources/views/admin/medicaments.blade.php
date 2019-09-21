@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-Medicament | Pharma Benazza
+Medicament | Pharmacie BENAZZA
 
 @endsection
 
@@ -32,12 +32,30 @@ Medicament | Pharma Benazza
                       </th>
                       <th>
                         Famille
-                      </th><th>
-                        Stock_Min
-                      </th><th>
-                        Remboursable
                       </th>
                     </thead>
+                    <tbody>
+
+
+                    @foreach ($med as $row)
+                   
+
+<tr>
+<td>{{ $row->idM }}  </td>
+<td>
+{{ $row->nom }}                       </td>
+  <td>
+{{ $row->dosage }}                       </td>
+  <td>
+  {{ $row->forme }} 
+  </td>
+  <td>
+  {{ $row->famille }}                         </td>
+  </tr>
+
+  @endforeach
+
+                    </tbody>
                    
                   </table>
                 </div>

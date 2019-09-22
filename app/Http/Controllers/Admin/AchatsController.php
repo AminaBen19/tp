@@ -55,8 +55,8 @@ return view('admin.Achat.dashboard')->with($ach);
                                         $achat = Achat::findOrFail($id);
 
 
-                                        $lot = DB::table('lot')
-                                               ->select('lot.*')
+        $lot = DB::table('lot')
+               ->select('lot.*')
                ->where('achat_id','=',$id)
                ->get();
         $fourni = DB::table('fournisseur')
@@ -74,16 +74,12 @@ return view('admin.Achat.dashboard')->with($ach);
                                     public function achatupdate(Request $request, $id){
                                         
                                             $achat = Achat::find($id);
-                                            $achat->date = now();
+                                            $achat->date = $request->input('date');
                                             $achat->fournisseur_id = $request->input('idF');
-                                            $achat->qt_achete = $request->input('qt_achete');
                                             $achat->save();
-                                            $qt_stock = $request->input('qt_achete')* $request->input('qt_stock');
                                             $lot =DB::table('lot')
                                                   ->where('achat_id', $id)
-                                                  ->update(['med_id' => $request->input('med'), 'qt_stock' => $request->input('qt_stock'),
-                                                  'date_fab' => $request->input('date_fab'),'date_per' => $request->input('date_per'),'prix' => $request->input('prix'),
-                                                  'qt_stock' => $qt_stock ]);
+                                                  ->update();
                                             return redirect('/achat-register');
                                         }
                                         

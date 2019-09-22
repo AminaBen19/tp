@@ -1,7 +1,7 @@
 @extends('layouts.presantation')
 
 @section('title')
-Accueil | Pharmacie BENAZZA
+Pharmacie BENAZZA
 
 @endsection
 

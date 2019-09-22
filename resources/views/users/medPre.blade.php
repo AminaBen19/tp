@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master1')
 
 @section('title')
 Medicament | Pharmacie BENAZZA
@@ -32,7 +32,8 @@ Medicament | Pharmacie BENAZZA
                       </th>
                       <th>
                         Famille
-                      </th><th>
+                      </th>
+                      <th>
                       Remboursable
                       </th><th>
                       Disponible 

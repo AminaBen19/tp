@@ -37,7 +37,7 @@
       
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
-        <li class="{{ 'dashboard' == request()->path() ? 'active' : '' }}">
+          <li class="{{ 'dashboard' == request()->path() ? 'active' : '' }}">
             <a href="/dashboard">
               <i class="now-ui-icons design_app"></i>
               <p>Dashboard</p>
@@ -49,14 +49,14 @@
               <p>Utilisateurs</p>
             </a>
           </li>
-          <li class="{{ 'medicaments' == request()->path() ? 'active' : '' }}">
-            <a href="/medicaments">
+          <li class="{{ 'medPre' == request()->path() ? 'active' : '' }}">
+            <a href="/medPre">
               <i class="fas fa-capsules ui-1_bell-53"></i>
               <p>Medicaments</p>
             </a>
           </li>
-          <li class="{{ 'fournisseurs' == request()->path() ? 'active' : '' }}">
-            <a href="/fournisseur">
+          <li class="{{ 'four' == request()->path() ? 'active' : '' }}">
+            <a href="/four">
               <i class="glyphicon glyphicon-list"></i>
               <p>Fournisseur</p>
             </a>

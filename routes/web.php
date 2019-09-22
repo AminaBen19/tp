@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 
 //profile
@@ -101,7 +101,7 @@ Route::delete('/achat-delete/{numA}','Admin\AchatsController@registerdelete');
 //Lot
 
 Route::get('lot','Admin\LotController@index');
-Route::get('lot/{numL}','Admin\LotController@show');
+Route::get('lot/{numL}','Admin\LotController@afficher');
 
 //vente
 
@@ -111,6 +111,22 @@ Route::get('lot/{numL}','Admin\LotController@show');
 
 
 });
+
+//users
+
+Route::get('/medPre','ListeMedicament@indexUser');
+Route::get('/four','users\FournisseurController@index');
+Route::get('/achat','users\AchatController@index');
+Route::get('/lot','users\LotController@index');
+Route::get('/dashboard','ListeMedicament@indexDash');
+
+
+
+
+
+
+Route::get('/home', 'HomeController@index');
+
 
 //medicament
 Route::get('/search','ListeMedicament@search');
@@ -130,6 +146,5 @@ return view('contact');
 
 
 
-//Route::get('/home', 'HomeController@index')->name('home');
 
 

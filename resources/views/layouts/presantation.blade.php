@@ -41,7 +41,9 @@
 
 
 
-
+        <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/home">Home</a>
+          </li>
 
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#">About</a>

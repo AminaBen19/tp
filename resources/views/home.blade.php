@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master1')
 
 @section('content')
 <div class="container">
@@ -14,9 +14,7 @@
   @endif
   <div class="content">
             <div class="links">
-                    <a href="/medRepture">Medicament en repture</a>
-                    <a href="/medStockmin">Medicament stock min </a>
-                    <a href="/fournisseurs">Liste des Fournisseur</a>
+                    
 
                 </div>
                 

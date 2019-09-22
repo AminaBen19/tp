@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('layouts.master1')
 
 @section('title')
-Medicament | Pharmacie BENAZZA
+Fournisseur | Pharmacie BENAZZA
 
 @endsection
 
@@ -12,65 +12,50 @@ Medicament | Pharmacie BENAZZA
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title">Liste des Médicaments</h4>
+                <h4 class="card-title">Liste des Fournisseurs</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table">
                     <thead class=" text-primary">
-                      <th>
+                    <th>
                         ID
                       </th>
                       <th>
                         Nom
                       </th>
                       <th>
-                        Dosage
+                        Adresse
                       </th>
                       <th>
-                        Forme
+                      N°Téléphone
                       </th>
                       <th>
-                        Famille
-                      </th><th>
-                      Remboursable
-                      </th><th>
-                      Disponible 
+                      Email
                       </th>
                     </thead>
-                    <tbody>
-
-
-                    @foreach ($med as $row)
-                   
+                   <tbody>
+                   @foreach ($fourni as $row)
 
 <tr>
-<td>{{ $row->idM }}  </td>
+<td>
+  {{ $row->idF }}                         </td>
+  
 <td>
 {{ $row->nom }}                       </td>
   <td>
-{{ $row->dosage }}                       </td>
+{{ $row->adresse }}                       </td>
   <td>
-  {{ $row->forme }} 
+  {{ $row->tel }} 
   </td>
   <td>
-  {{ $row->famille }}                         </td>
-  <td >
-{{ $row->isremboursable  }} 
-  </td>
+  {{ $row->email }}                         </td>
   
-  <td>
-  @if ($row->stock_min > 0 )
-  <?php echo"1"?>
-  @else
-  <?php echo"0"?>
 
-    @endif                         </td>
-  </tr>
-
-  @endforeach
-
-                    </tbody>
+</tr>
+@endforeach
+                   </tbody>
+                   
                    
                   </table>
                 </div>

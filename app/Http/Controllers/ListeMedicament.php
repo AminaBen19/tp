@@ -15,6 +15,22 @@ class ListeMedicament extends Controller
         return view('medicamentPre', ['med' => $med]);
    }
 
+   public function indexUser(){
+
+        
+    $med = DB::table('medicament')->paginate(15);
+
+    return view('users.medPre', ['med' => $med]);
+}
+
+public function indexDash(){
+
+    $med = DB::table('medicament')->paginate(15);
+
+     return view('users.dashboard')->with('med',$med);
+
+}
+
 
 
 public function search(Request $request){

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Edit-Profile  | Pharma Benazza
+Profile  | Pharma Benazza
 
 @endsection
 
@@ -13,7 +13,7 @@ Edit-Profile  | Pharma Benazza
 
 <div class="card">
 <div class="card-header">
-<h3>Edit profile </h3>
+<h3>Profile </h3>
 </div>
 
 <div class="card-body">

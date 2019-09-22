@@ -17,20 +17,11 @@ class VenteController extends Controller
         $this->middleware('auth');
       }
 
-      /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+     
     public function index()
     {
         $arr['vente'] = DB::table('vente')->select('vente.*')->paginate(30);
         return view('Vente.dashboard')->with($arr);
     }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     
 }

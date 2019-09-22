@@ -56,10 +56,10 @@ Lot | Pharmacie BENAZZA
   <td>
   {{ $row->qt_stock }}                         </td>
   <td class="text-left">
-                <form action="{{ url('achat/'.$row->achat_id) }}" method="post">
+                <form action="{{ url() }}" method="post">
                   {{ csrf_field() }}
 
-                  <a href="{{ url('lot/'.$row->numL) }}" class="btn btn-primary" title="detail"><i class="fa fa-align-justify"></i></a>
+                  <a href="{{ url() }}" class="btn btn-primary" title="detail"><i class="fa fa-align-justify"></i></a>
 
 
                 </form>
